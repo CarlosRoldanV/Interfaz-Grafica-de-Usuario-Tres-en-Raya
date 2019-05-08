@@ -10,14 +10,14 @@ import javax.swing.JOptionPane;
  *
  * @author Carlos
  */
-public class Tablero extends javax.swing.JFrame {
+public class Tres extends javax.swing.JFrame {
 
     /**
      * Creates new form Tablero
      */
     String[][] matriz=new String[4][4];
     int mejorfila, mejorcolumna;
-    public Tablero() {
+    public Tres() {
         initComponents();
         InicializarMatriz();
         this.setLocationRelativeTo(null);
@@ -44,16 +44,6 @@ public class Tablero extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        turno = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        compu = new javax.swing.JTextField();
-        human = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        facil = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
         unouno = new javax.swing.JLabel();
         unodos = new javax.swing.JLabel();
@@ -64,29 +54,132 @@ public class Tablero extends javax.swing.JFrame {
         tredos = new javax.swing.JLabel();
         tretre = new javax.swing.JLabel();
         dostre = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        compu = new javax.swing.JTextField();
+        human = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        facil = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
+        turno = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tres en raya");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("Nuevo juego");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tres en raya", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 24), new java.awt.Color(0, 255, 102))); // NOI18N
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        unouno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        unouno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        unouno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        unouno.setName("unouno"); // NOI18N
+        unouno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                unounoMouseReleased(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                unounoMouseExited(evt);
+            }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                unounoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                unounoMouseEntered(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 45, 129, -1));
+        jPanel3.add(unouno, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 87, 96));
 
-        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel1.setText("Turno de:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 79, -1, -1));
+        unodos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        unodos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        unodos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        unodos.setName("unodos"); // NOI18N
+        unodos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                unodosMouseClicked(evt);
+            }
+        });
+        jPanel3.add(unodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 27, 87, 96));
 
-        turno.setEditable(false);
-        turno.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
-        turno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        turno.setText("Humano");
-        getContentPane().add(turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 111, 129, -1));
+        unotre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        unotre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        unotre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        unotre.setName("unotre"); // NOI18N
+        unotre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                unotreMouseClicked(evt);
+            }
+        });
+        jPanel3.add(unotre, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 27, 87, 96));
+
+        dosuno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        dosuno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dosuno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dosuno.setName("dosuno"); // NOI18N
+        dosuno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dosunoMouseClicked(evt);
+            }
+        });
+        jPanel3.add(dosuno, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 129, 87, 90));
+
+        dosdos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        dosdos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dosdos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dosdos.setName("dosdos"); // NOI18N
+        dosdos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dosdosMouseClicked(evt);
+            }
+        });
+        jPanel3.add(dosdos, new org.netbeans.lib.awtextra.AbsoluteConstraints(121, 129, 87, 90));
+
+        treuno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        treuno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        treuno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        treuno.setName("treuno"); // NOI18N
+        treuno.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                treunoMouseClicked(evt);
+            }
+        });
+        jPanel3.add(treuno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 87, 96));
+
+        tredos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        tredos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tredos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tredos.setName("tredos"); // NOI18N
+        tredos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tredosMouseClicked(evt);
+            }
+        });
+        jPanel3.add(tredos, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 87, 96));
+
+        tretre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        tretre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tretre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        tretre.setName("tretre"); // NOI18N
+        tretre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tretreMouseClicked(evt);
+            }
+        });
+        jPanel3.add(tretre, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 87, 96));
+
+        dostre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        dostre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dostre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        dostre.setName("dostre"); // NOI18N
+        dostre.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dostreMouseClicked(evt);
+            }
+        });
+        jPanel3.add(dostre, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 129, 87, 90));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Puntaje"));
 
@@ -135,187 +228,54 @@ public class Tablero extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 256, -1, -1));
+        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 256, -1, -1));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dificultad"));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jButton1.setText("Nuevo juego");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 45, 170, 90));
 
-        facil.setText("Señala la casilla para empezar");
+        facil.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        facil.setText("EMPEZAR");
+        facil.setActionCommand("EMPEZAR");
         facil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 facilActionPerformed(evt);
             }
         });
+        jPanel3.add(facil, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 190, -1));
+        facil.getAccessibleContext().setAccessibleName("EMPEZAR");
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 560, 390));
+
+        jLabel1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        jLabel1.setText("Turno de:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 79, -1, -1));
+
+        turno.setEditable(false);
+        turno.setFont(new java.awt.Font("Arial Black", 0, 12)); // NOI18N
+        turno.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        turno.setText("Humano");
+        getContentPane().add(turno, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 111, 129, -1));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Dificultad"));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(facil)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 181, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(facil)
-                .addGap(46, 46, 46))
+            .addGap(0, 69, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 146, -1, -1));
-
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Juego"));
-
-        unouno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        unouno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        unouno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        unouno.setName("unouno"); // NOI18N
-        unouno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                unounoMouseReleased(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                unounoMouseExited(evt);
-            }
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                unounoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                unounoMouseEntered(evt);
-            }
-        });
-
-        unodos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        unodos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        unodos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        unodos.setName("unodos"); // NOI18N
-        unodos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                unodosMouseClicked(evt);
-            }
-        });
-
-        unotre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        unotre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        unotre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        unotre.setName("unotre"); // NOI18N
-        unotre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                unotreMouseClicked(evt);
-            }
-        });
-
-        dosuno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        dosuno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dosuno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        dosuno.setName("dosuno"); // NOI18N
-        dosuno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dosunoMouseClicked(evt);
-            }
-        });
-
-        dosdos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        dosdos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dosdos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        dosdos.setName("dosdos"); // NOI18N
-        dosdos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dosdosMouseClicked(evt);
-            }
-        });
-
-        treuno.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        treuno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        treuno.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        treuno.setName("treuno"); // NOI18N
-        treuno.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                treunoMouseClicked(evt);
-            }
-        });
-
-        tredos.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        tredos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tredos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        tredos.setName("tredos"); // NOI18N
-        tredos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tredosMouseClicked(evt);
-            }
-        });
-
-        tretre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        tretre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        tretre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        tretre.setName("tretre"); // NOI18N
-        tretre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tretreMouseClicked(evt);
-            }
-        });
-
-        dostre.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        dostre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dostre.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        dostre.setName("dostre"); // NOI18N
-        dostre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                dostreMouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(unouno, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(unodos, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(unotre, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(dosuno, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dosdos, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(dostre, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(treuno, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tredos, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tretre, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(unodos, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                    .addComponent(unotre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(unouno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(dosuno, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                        .addComponent(dosdos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(dostre, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(tredos, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
-                        .addComponent(tretre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(treuno, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -326,9 +286,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.unouno.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[1][1] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -361,9 +321,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.unodos.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[1][2] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -377,9 +337,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.unotre.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[1][3] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -393,9 +353,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.dosuno.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[2][1] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -409,9 +369,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.dosdos.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[2][2] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -424,9 +384,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.dostre.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[2][3] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -440,9 +400,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.treuno.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[3][1] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -455,9 +415,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.tredos.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[3][2] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -470,9 +430,9 @@ public class Tablero extends javax.swing.JFrame {
         if((this.tretre.getText().equals("")) && (this.turno.getText().equals("Humano")) &&(facil.isSelected())){
             this.matriz[3][3] = "X";
             impTablero();
-            Maquina m=new Maquina();
+            Juego m=new Juego();
             this.turno.setText("Maquina");
-            m.NivelFacil(0,1,this);
+            m.tres(0,1,this);
             this.matriz[this.mejorfila][this.mejorcolumna]="O";
             impTablero();
             this.turno.setText("Humano");
@@ -501,7 +461,7 @@ public class Tablero extends javax.swing.JFrame {
         NuevaPartida();
         InicializarMatriz();
     }//GEN-LAST:event_facilActionPerformed
-    public void Evaluar(Maquina m){
+    public void Evaluar(Juego m){
         if(m.eval(this)==-1) {
                 JOptionPane.showMessageDialog(this, "Increible!!! Usted gana la partida!"); 
                 NuevaPartida();
@@ -560,20 +520,21 @@ public class Tablero extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Tablero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tres.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Tablero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tres.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Tablero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tres.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Tablero.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Tres.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Tablero().setVisible(true);
+                new Tres().setVisible(true);
             }
         });
     }

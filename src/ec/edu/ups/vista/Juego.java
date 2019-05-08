@@ -1,9 +1,8 @@
 package ec.edu.ups.vista;
 
-public class Maquina
-{
+public class Juego{
 
-    public int NivelFacil(int iteraciones, int modo, Tablero ta){
+    public int tres(int iteraciones, int modo, Tres ta){
       int mflocal = 0; int mclocal = 0;
     int valor = eval(ta);
     if (valor != 2 || iteraciones==2) return valor;
@@ -14,12 +13,12 @@ public class Maquina
         if (ta.matriz[i][j].equals("-")) {
           if (modo == 1) {
             ta.matriz[i][j] = "O";
-            int val = NivelFacil(iteraciones+1,2, ta);
+            int val = tres(iteraciones+1,2, ta);
             if (valor < val) { valor = val; mflocal = i; mclocal = j; }
           }
           else {
             ta.matriz[i][j] = "X";
-            int val = NivelFacil(iteraciones+1, 1, ta);
+            int val = tres(iteraciones+1, 1, ta);
             if (valor > val) { valor = val; mflocal = i; mclocal = j;
             }
           }
@@ -30,7 +29,7 @@ public class Maquina
     ta.mejorcolumna = mclocal;
     return valor;
   }
-   public int eval(Tablero ta)
+   public int eval(Tres ta)
   {
       int i, j;
     String ganador = "-";
