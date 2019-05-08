@@ -70,6 +70,7 @@ public class Tres extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel3.setBackground(new java.awt.Color(204, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tres en raya", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 24), new java.awt.Color(0, 255, 102))); // NOI18N
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -181,6 +182,7 @@ public class Tres extends javax.swing.JFrame {
         });
         jPanel3.add(dostre, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 129, 87, 90));
 
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Puntaje"));
 
         jLabel2.setText("Humano:");
@@ -239,6 +241,7 @@ public class Tres extends javax.swing.JFrame {
         });
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(349, 45, 170, 90));
 
+        facil.setBackground(new java.awt.Color(204, 255, 255));
         facil.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         facil.setText("EMPEZAR");
         facil.setActionCommand("EMPEZAR");
